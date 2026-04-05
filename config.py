@@ -12,7 +12,7 @@ class Config:
     # HTTP
     timeout: int         = 10
     max_retries: int     = 2
-    user_agent: str      = "nn0nn/1.0 (passive-recon)"
+    user_agent: str      = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0"
     follow_redirects: bool = True
 
     # Crawl
