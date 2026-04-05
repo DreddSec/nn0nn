@@ -4,7 +4,7 @@
 ---
 # 🕷 nn0nn
 
-## Passive recon & surface mapping tool for bug bounty hunters.
+## 🕸 Passive recon & surface mapping tool for bug bounty hunters 🪲.
 
 > **nn0nn** crawls a target, crosses data from multiple passive sources and generates a structured report — without sending a single active probe. Designed to be the first step of any BBG engagement or web pentest before you touch any active recon tool.
 
