@@ -10,7 +10,7 @@
 
 ---
 
-## What it does
+## ✅ What it does
 
 - Crawls the target and extracts endpoints, links, parameters, and forms
 - Pulls and analyzes JavaScript files looking for secrets, tokens and hidden endpoints
@@ -19,13 +19,13 @@
 - Cross-references IPs and services with Shodan
 - Correlates everything into a single unified report (JSON + HTML)
 
-## What it does NOT do
+## ❗️What it does NOT do
 
 The tool **nn0nn** is **strictly passive**. No fuzzing, no brute-force, no active scanning. If you want to fuzz, that's a different tool and a different scope.
 
 ---
 
-## Installation
+## 💿 Installation
 
 ```bash
 git clone https://github.com/yourusername/nn0nn.git
@@ -50,12 +50,11 @@ cp config.example.env .env
 ```env
 SHODAN_API_KEY=your_key_here
 ```
-
 Shodan is optional. If no key is provided, nn0nn skips that module and runs everything else normally.
 
 ---
 
-## Usage
+## ℹ️ Usage
 
 ```bash
 # Basic recon
@@ -71,7 +70,7 @@ python main.py -t example.com -o ./reports/
 python main.py -t example.com -v
 ```
 
-### Options
+### 🔄 Options
 
 | Flag | Description |
 |------|-------------|
@@ -100,7 +99,7 @@ output/
 
 ---
 
-## Project structure
+## 📁 Project structure
 
 ```
 nn0nn/
@@ -133,7 +132,7 @@ nn0nn/
 
 ---
 
-## Passive sources
+## 🔍 Passive sources
 
 | Source | What it provides |
 |--------|-----------------|
@@ -145,7 +144,7 @@ nn0nn/
 
 ---
 
-## Secrets detection
+## 🤐 Secrets detection
 
 > Looks for the following patterns inside JavaScript files and HTML source:
 
@@ -158,7 +157,7 @@ nn0nn/
 
 ---
 
-## Roadmap
+## 🛣 Roadmap
 
 - [ ] VirusTotal passive lookup
 - [ ] WaybackMachine URL extraction
