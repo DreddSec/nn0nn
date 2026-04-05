@@ -6,7 +6,7 @@
 
 > Passive recon & surface mapping tool for bug bounty hunters.
 
-nn0nn crawls a target, crosses data from multiple passive sources and generates a structured report — without sending a single active probe. Designed to be the first step of any BBG engagement before you touch a fuzzer.
+**nn0nn** crawls a target, crosses data from multiple passive sources and generates a structured report — without sending a single active probe. Designed to be the first step of any BBG engagement or web pentest before you touch any active recon tool.
 
 ---
 
@@ -21,7 +21,7 @@ nn0nn crawls a target, crosses data from multiple passive sources and generates 
 
 ## What it does NOT do
 
-nn0nn is **strictly passive**. No fuzzing, no brute-force, no active scanning. If you want to fuzz, that's a different tool and a different scope.
+The tool **nn0nn** is **strictly passive**. No fuzzing, no brute-force, no active scanning. If you want to fuzz, that's a different tool and a different scope.
 
 ---
 
@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 ## Configuration
 
-Copy the example config and add your API keys:
+> Copy the example config and add your API keys:
 
 ```bash
 cp config.example.env .env
@@ -85,9 +85,9 @@ python main.py -t example.com -v
 
 ---
 
-## Output
+## 📋 Output
 
-nn0nn generates two files per run inside the output directory:
+> It generates two files per run inside the output directory:
 
 ```
 output/
@@ -96,7 +96,7 @@ output/
     └── report.html     ← human-readable report
 ```
 
-The JSON output is designed to be piped into other tools like nuclei or your own scripts.
+> The *JSON* output is designed to be piped into other tools like nuclei or your own scripts.
 
 ---
 
@@ -147,7 +147,7 @@ nn0nn/
 
 ## Secrets detection
 
-nn0nn looks for the following patterns inside JavaScript files and HTML source:
+> Looks for the following patterns inside JavaScript files and HTML source:
 
 - AWS Access Keys (`AKIA...`)
 - Google API Keys (`AIza...`)
@@ -167,12 +167,6 @@ nn0nn looks for the following patterns inside JavaScript files and HTML source:
 
 ---
 
-## Disclaimer
+## ‼️ Disclaimer
 
-nn0nn is built for **authorized security testing only**. Only use it against targets you have explicit permission to test. The author is not responsible for misuse.
-
----
-
-## Author
-
-Built by a sysadmin learning bug bounty the hard way.
+> **nn0nn** is built for **authorized security testing only**. Only use it against targets you have explicit permission and authorization to test. The author is not responsible for misuse.
