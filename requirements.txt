@@ -1,0 +1,8 @@
+httpx
+beautifulsoup4
+lxml
+jinja2
+shodan
+click
+colorama
+tqdm

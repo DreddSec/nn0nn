@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "nn0nn"
+version = "1.0.0"
+description = "Passive recon & surface mapping tool"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx",
+    "beautifulsoup4",
+    "lxml",
+    "jinja2",
+    "shodan",
+    "click",
+    "colorama",
+    "tqdm",
+]
+
+[project.scripts]
+nn0nn = "main:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
