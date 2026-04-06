@@ -28,7 +28,7 @@ SPIDER = r"""
  """
 
 VERSION = "v1.0.0"
-TAGLINE = "passive recon & surface mapper"
+TAGLINE = "Best crawler ever existed"
 
 def banner():
     print(Fore.RED + SPIDER)
