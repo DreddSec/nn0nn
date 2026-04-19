@@ -30,17 +30,18 @@ SPIDER = r"""
 
 VERSION = "v1.0.0"
 
-
-fig = Figlet(font='banner')
+fig = Figlet(font='slant')
 TAGLINE = fig.renderText("Sh4d0w Spid3r")
 
 def banner():
     print(Fore.RED + SPIDER)
-    print(Fore.WHITE + Style.BRIGHT + "        nn0nn  " + Fore.RED + f"  {VERSION}")
-    print(Fore.BLACK + Style.BRIGHT + f"        {TAGLINE}\n")
+    print(Fore.BLACK + Style.BRIGHT + f" {TAGLINE}")
+    print(Fore.WHITE + Style.BRIGHT + "  nn0nn  " + Fore.RED + f"  {VERSION}\n")
 
 def info(msg):  print(Fore.CYAN   + f"  [*] {msg}")
 def ok(msg):    print(Fore.GREEN  + f"  [+] {msg}")
 def warn(msg):  print(Fore.YELLOW + f"  [!] {msg}")
 def error(msg): print(Fore.RED    + f"  [-] {msg}")
 def dim(msg):   print(Fore.BLACK  + Style.BRIGHT + f"      {msg}")
+
+banner()
