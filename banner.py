@@ -36,7 +36,7 @@ TAGLINE = fig.renderText("Sh4d0w Spid3r")
 def banner():
     print(Fore.RED + SPIDER)
     print(Fore.BLACK + Style.BRIGHT + f" {TAGLINE}")
-    print(Fore.WHITE + Style.BRIGHT + "  nn0nn  " + Fore.RED + f"  {VERSION}\n")
+    print(Fore.WHITE + Style.BRIGHT + "  nn0nn  " + Fore.GREEN + f"  {VERSION}\n")
 
 def info(msg):  print(Fore.CYAN   + f"  [*] {msg}")
 def ok(msg):    print(Fore.GREEN  + f"  [+] {msg}")
