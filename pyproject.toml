@@ -26,7 +26,7 @@ dependencies = [
 # Formato: "comando" = "fichero:función"
 # Cuando el usuario escribe 'nn0nn', Python ejecuta la función 'cli' de 'nn0nn.py'
 [project.scripts]
-nn0nn = "nn0nn:cli"
+nn0nn = "nn0nn:main"
 
 # ── CONFIGURACIÓN DE SETUPTOOLS ───────────────────────────────────────────────
 # Le dice a setuptools qué ficheros incluir en el paquete.
