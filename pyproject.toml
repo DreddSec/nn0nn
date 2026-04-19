@@ -6,7 +6,7 @@ build-backend = "setuptools.backends.legacy:build"
 [project]
 name = "nn0nn"
 version = "1.0.0"
-description = "Passive recon & surface mapping — shadow spider for bug bounty"
+description = "Passive recon & surface mapping — crawler for bug bounty"
 requires-python = ">=3.10"
 
 # Dependencias que pip instala automáticamente al hacer 'pip install -e .'

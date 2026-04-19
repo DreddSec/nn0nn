@@ -84,54 +84,6 @@ python main.py -t example.com -v
 
 ---
 
-## 📋 Output
-
-> It generates two files per run inside the output directory:
-
-```
-output/
-└── example.com_2024-01-15_10-30/
-    ├── report.json     ← structured data, feed it to other tools
-    └── report.html     ← human-readable report
-```
-
-> The *JSON* output is designed to be piped into other tools like nuclei or your own scripts.
-
----
-
-## 📁 Project structure
-
-```
-nn0nn/
-├── main.py                  # entry point & CLI
-├── requirements.txt
-├── config.example.env
-│
-├── core/
-│   ├── http_client.py       # shared httpx client
-│   └── config.py            # settings & API keys loader
-│
-├── collectors/
-│   ├── crawler.py           # links, endpoints, forms, parameters
-│   ├── js_analyzer.py       # JS files download & secrets extraction
-│   ├── ssl_inspector.py     # TLS cert & cipher inspection
-│   ├── headers_analyzer.py  # security headers analysis
-│   ├── subdomains.py        # passive subdomain enum via crt.sh
-│   └── shodan_lookup.py     # Shodan API integration
-│
-├── analyzers/
-│   ├── correlator.py        # merges all collector outputs
-│   └── secrets_finder.py    # regex patterns for secrets & tokens
-│
-└── output/
-    ├── json_exporter.py
-    ├── html_reporter.py
-    └── templates/
-        └── report.html
-```
-
----
-
 ## 🔍 Passive sources
 
 | Source | What it provides |
