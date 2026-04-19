@@ -43,5 +43,3 @@ def ok(msg):    print(Fore.GREEN  + f"  [+] {msg}")
 def warn(msg):  print(Fore.YELLOW + f"  [!] {msg}")
 def error(msg): print(Fore.RED    + f"  [-] {msg}")
 def dim(msg):   print(Fore.BLACK  + Style.BRIGHT + f"      {msg}")
-
-banner()

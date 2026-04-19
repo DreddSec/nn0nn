@@ -6,3 +6,4 @@ shodan
 click
 colorama
 tqdm
+pyfiglet

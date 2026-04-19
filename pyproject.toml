@@ -18,6 +18,7 @@ dependencies = [
     "click",            # CLI — define los flags y comandos de nn0nn
     "colorama",         # colores en terminal (output de niveles info/ok/warn/error)
     "tqdm",             # barras de progreso (subdominios, crawl, etc.)
+    "pyfiglet"          # banner
 ]
 
 # ── ENTRY POINT ──────────────────────────────────────────────────────────────
