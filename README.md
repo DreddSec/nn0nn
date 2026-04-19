@@ -28,29 +28,14 @@ The tool **nn0nn** is **strictly passive**. No fuzzing, no brute-force, no activ
 ## 💿 Installation
 
 ```bash
-git clone https://github.com/yourusername/nn0nn.git
+git clone https://github.com/DreddSec/nn0nn.git
 cd nn0nn
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+pip install -e .
+cp config.example.env .env   # add the keys here
+nn0nn -t empresa.com
 ```
 
 **Requirements**: Python 3.10+
-
----
-
-## Configuration
-
-> Copy the example config and add your API keys:
-
-```bash
-cp config.example.env .env
-```
-
-```env
-SHODAN_API_KEY=your_key_here
-```
-Shodan is optional. If no key is provided, nn0nn skips that module and runs everything else normally.
 
 ---
 
@@ -58,16 +43,16 @@ Shodan is optional. If no key is provided, nn0nn skips that module and runs ever
 
 ```bash
 # Basic recon
-python main.py -t example.com
+nn0nn -t example.com
 
 # With Shodan correlation
-python main.py -t example.com --shodan
+nn0nn -t example.com --shodan
 
 # Custom output directory
-python main.py -t example.com -o ./reports/
+nn0nn -t example.com -o ./reports/
 
 # Verbose output
-python main.py -t example.com -v
+nn0nn -t example.com -v
 ```
 
 ### 🔄 Options
@@ -77,10 +62,9 @@ python main.py -t example.com -v
 | `-t`, `--target` | Target domain (required) |
 | `-o`, `--output` | Output directory (default: `./output/`) |
 | `--shodan` | Enable Shodan cross-reference |
-| `--no-js` | Skip JavaScript analysis |
 | `--no-subdomains` | Skip subdomain enumeration |
 | `-v`, `--verbose` | Verbose output |
-| `--format` | Output format: `json`, `html`, `both` (default: `both`) |
+| `--format` | Output format: `json` or `html` |
 
 ---
 
@@ -109,15 +93,6 @@ python main.py -t example.com -v
 
 ---
 
-## 🛣 Roadmap
-
-- [ ] VirusTotal passive lookup
-- [ ] WaybackMachine URL extraction
-- [ ] Output to SQLite for persistent storage across runs
-- [ ] Integration with nuclei templates on found endpoints
-
----
-
-## ‼️ Disclaimer
+## ‼️Disclaimer
 
 > **nn0nn** is built for **authorized security testing only**. Only use it against targets you have explicit permission and authorization to test. The author is not responsible for misuse.
