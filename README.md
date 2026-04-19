@@ -62,7 +62,8 @@ nn0nn -t example.com -v
 | `-t`, `--target` | Target domain (required) |
 | `-o`, `--output` | Output directory (default: `./output/`) |
 | `--shodan` | Enable Shodan cross-reference |
-| `--no-subdomains` | Skip subdomain enumeration |
+| `-wb`, `--wayback` | Look for historic endpoints and params |
+| `--urlscan` | Compilation of requests, cookies and screenshots |
 | `-v`, `--verbose` | Verbose output |
 | `--format` | Output format: `json` or `html` |
 
