@@ -1,4 +1,5 @@
 from colorama import Fore, Style, init
+from pyfiglet import Figlet
 init(autoreset=True)
 
 SPIDER = r"""
@@ -28,7 +29,10 @@ SPIDER = r"""
  """
 
 VERSION = "v1.0.0"
-TAGLINE = "Best crawler ever existed"
+
+
+fig = Figlet(font='banner')
+TAGLINE = fig.renderText("Sh4d0w Spid3r")
 
 def banner():
     print(Fore.RED + SPIDER)
