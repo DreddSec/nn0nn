@@ -1,0 +1,34 @@
+[build-system]
+# Define qué herramientas usa pip para construir e instalar el paquete
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "nn0nn"
+version = "1.0.0"
+description = "Passive recon & surface mapping — shadow spider for bug bounty"
+requires-python = ">=3.10"
+
+# Dependencias que pip instala automáticamente al hacer 'pip install -e .'
+dependencies = [
+    "httpx",            # cliente HTTP moderno (peticiones a crt.sh, headers, crawl)
+    "beautifulsoup4",   # parsear HTML (crawl de endpoints, forms, scripts)
+    "lxml",             # parser rápido para beautifulsoup4
+    "shodan",           # SDK oficial de Shodan (módulo shodan opcional)
+    "click",            # CLI — define los flags y comandos de nn0nn
+    "colorama",         # colores en terminal (output de niveles info/ok/warn/error)
+    "tqdm",             # barras de progreso (subdominios, crawl, etc.)
+]
+
+# ── ENTRY POINT ──────────────────────────────────────────────────────────────
+# Esto es lo que hace que 'nn0nn' funcione como comando en la terminal.
+# Formato: "comando" = "fichero:función"
+# Cuando el usuario escribe 'nn0nn', Python ejecuta la función 'cli' de 'nn0nn.py'
+[project.scripts]
+nn0nn = "nn0nn:cli"
+
+# ── CONFIGURACIÓN DE SETUPTOOLS ───────────────────────────────────────────────
+# Le dice a setuptools qué ficheros incluir en el paquete.
+# where=["."] significa: busca paquetes en la raíz del proyecto.
+[tool.setuptools.packages.find]
+where = ["."]

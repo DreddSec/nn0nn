@@ -1,0 +1,28 @@
+# ── Entorno virtual ───────────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── API keys y configuración sensible ────────────────────────────────────────
+# NUNCA subir el .env real — contiene tus API keys
+.env
+
+# ── Output de la herramienta ─────────────────────────────────────────────────
+# Los reportes generados no se suben al repo
+output/
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Editor ────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
